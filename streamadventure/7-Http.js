@@ -6,6 +6,7 @@ var server = http.createServer(function (request, response) {
         request.pipe(map(function (data) {
             return data.toString().toUpperCase();
         })).pipe(response);
+    } else {
         response.end();
     }
 });
